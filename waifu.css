@@ -1,7 +1,9 @@
+
 .waifu {
+    display: none;
     position: fixed;
     bottom: 0;
-    left: 0;
+    right: 0;
     z-index: 1;
     font-size: 0;
     transition: all .3s ease-in-out;
@@ -12,8 +14,12 @@
     -webkit-transform: translateY(0);
     transform: translateY(0);
 }
+body.night .waifu {
+    color: #34495e;
+    filter: brightness(30%);
+}
 @media (max-width: 768px) {
-    .waifu {
+    .waifu,.pio {
         display: none;
     }
 }
@@ -21,24 +27,57 @@
     opacity: 0;
     width: 250px;
     height: 70px;
-    margin: -20px 20px;
+    top: -5px;
+    right: 10px;
     padding: 5px 10px;
-    border: 1px solid rgba(224, 186, 140, 0.62);
-    border-radius: 12px;
-    background-color: rgba(236, 217, 188, 0.5);
-    box-shadow: 0 3px 15px 2px rgba(191, 158, 118, 0.2);
-    font-size: 12px;
+    border: 2px solid rgb(57, 57, 57);
+    background-color: #fff;
+    font-size: 13px;
     text-overflow: ellipsis;
     overflow: hidden;
     position: absolute;
-    animation-delay: 5s;
     animation-duration: 50s;
     animation-iteration-count: infinite;
     animation-name: shake;
     animation-timing-function: ease-in-out;
 }
+.waifu-tool {
+    display: none;
+    color: #aaa;
+    top: 100px;
+    right: 10px;
+    font-size: 14px;
+    position: absolute;
+}
+.waifu:hover .waifu-tool {
+    display: block;
+}
+.waifu-tool span {
+    display: block;
+    cursor: pointer;
+    color: rgb(57, 57, 57);
+    background-color: #fff;
+    border: 2px solid rgb(57, 57, 57);
+    padding: 0 4px;
+    margin-bottom: 2px;
+    line-height: 20px;
+    transition: 0.2s;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+    animation-name: shake;
+    animation-timing-function: ease-in-out;
+}
+.waifu-tool span:hover {
+    z-index: 1;
+    transform: scale(1.5);
+    animation: none;
+}
 .waifu #live2d{
     position: relative;
+    cursor: grab;
+}
+.waifu #live2d:active {
+    cursor: grabbing;
 }
 
 @keyframes shake {
@@ -242,3 +281,5 @@
         transform: translate(0, 0) rotate(0);
     }
 }
+
+
