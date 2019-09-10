@@ -1,7 +1,7 @@
 {
     "type": "Live2D Model Setting",
     "name": "model",
-    "model": "model.moc?v=1537512352",
+    "model": "model2.moc",
     "textures": [
         "textures/default-costume2.png"
     ],
@@ -18,16 +18,16 @@
     },
     "motions":{
         "idle":[
-            {"file":"motions/Idle.mtn?v=1537512352"}
+            {"file":"motions2/Idle.mtn"}
         ],
         "sleepy":[
-            {"file":"motions/Nemui.mtn?v=1537512352"}
+            {"file":"motions2/Nemui.mtn"}
         ],
         "flick_head":[
-            {"file":"motions/Anone_Synced.mtn?v=1537512352"}
+            {"file":"motions2/Anone_Synced.mtn"}
         ],
         "tap_body":[
-            {"file":"motions/Dance.mtn?v=1537512352"}
+            {"file":"motions2/Dance.mtn"}
         ]
     }
 }
